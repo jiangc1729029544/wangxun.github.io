@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 引入样式 -->
+		<!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+		<link rel="icon" href="../img/tab.icon"/>
+		<!-- 引入组件库 -->
+		<!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+		<title>网讯邮箱/QQ企业邮箱/首页</title>
+		<style>
+			#fixed ul {
+				list-style: none;
+			}
+
+			#fixed a {
+				text-decoration: none;
+				color: black;
+			}
+
+			#fixed .fl {
+				float: left;
+			}
+
+			#fixed .fr {
+				float: right;
+			}
+
+			#fixed .clearfix::after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+
+			#fixed .w {
+				width: 1200px;
+				margin: 0 auto;
+			}
+
+			#fixed input {
+				outline: none;
+			}
+
+			#fixed textarea {
+				outline: none;
+				resize: none;
+			}
+
+			#fixed img {
+				width: 100%;
+				height: 100%;
+			}
+
+
+			* {
+				margin: 0px;
+				padding: 0px;
+				/*这里给全局设置，去除所有元素标签的内外边距*/
+			}
+
+			.quanbu1 {
+				width: 100%;
+				height: 100%;
+			}
+
+			.quanbu {
+				width: 100%;
+				height: 100%;
+			}
+
+			.login {
+				height: 14.2px;
+				width: 100%;
+				position: relative;
+				margin-top: 1px;
+				font-size: 1px;
+			}
+
+			.login2 {
+				list-style: none;
+				width: 100%;
+			}
+
+			.login2 {
+				display: inline-block;
+				/* padding-right: 7px; */
+				position: relative;
+				left: 90px;
+			}
+
+			.login2-1 {
+				display: inline-block;
+				position: relative;
+				left: 1160px;
+			}
+
+			.login2-2 {
+				display: inline-block;
+				position: relative;
+				top: -17px;
+				left: 1230px;
+			}
+
+			.login2-3 {
+				display: inline-block;
+				position: relative;
+				top: -33px;
+				left: 1330px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:link {
+				color: white;
+			}
+
+			a:visited {
+				color: black;
+			}
+
+			a:hover {
+				color: yellow;
+				text-decoration: underline;
+			}
+
+			a:active {
+				color: red;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			.banner-wrapper {
+				width: 100%;
+				height: 500px;
+				margin: 0 auto;
+				position: relative;
+				float: left;
+			}
+
+			ul.banner {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
+			ul.banner li {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			ul.banner li.show {
+				opacity: 1;
+			}
+
+			ul.indicators {
+				position: absolute;
+				left: 50%;
+				bottom: 40px;
+				transform: translateX(-50%);
+			}
+
+			ul.indicators li {
+				width: 10px;
+				height: 3px;
+				border-radius: 25%;
+				background-color: gray;
+				float: left;
+				margin: 0 20px;
+				cursor: pointer;
+				left: 600px;
+				top: 30px;
+			}
+
+			ul.indicators li.active {
+				background-color: white;
+			}
+
+			.built {
+				margin-left: 350px;
+				width: 145px;
+				height: 23px;
+			}
+
+			.ziti {
+				display: inline-block;
+				width: 160px;
+				height: 50px;
+				font-size: 1.5px;
+				color: white;
+
+			}
+
+			.navigation {
+				width: 100%;
+				height: 59px;
+				/* float: left; */
+				position: relative;
+				/* left: 100px; */
+				bottom: 500px;
+			}
+
+			.navigation ul {
+				list-style: none;
+				width: 100%;
+			}
+
+			.navigation li {
+				display: inline-block;
+				padding-right: 27px;
+				color: #FFFFFF;
+				position: relative;
+				left: 500px;
+				top: -50px;
+
+
+			}
+
+			.login1 img {
+				display: inline-block;
+				margin-left: 210px;
+				margin-top: 20px;
+				width: 105px;
+				height: 22px;
+
+			}
+
+			/* 	.login1 {
+				width: 100px;
+			}
+ */
+			.ziti {
+				display: inline-block;
+				line-height: 14px;
+				font-size: 12px;
+				color: #fff;
+			}
+
+			.photo1 img {
+				position: relative;
+				top: 5px;
+				right: 5px;
+			}
+
+			.navigation2 p {
+				font-size: 10px;
+				display: block;
+				margin-block-start: 1em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				margin-top: -33px;
+				position: relative;
+				top: 30px;
+				color: #2D8EFF;
+
+			}
+
+			.navigation2 img {
+				width: 20px;
+				height: 20px;
+			}
+
+			.navigation2 {
+				background-color: #FFFFFF;
+				width: 40px;
+				height: 80px;
+				text-align: center;
+				position: relative;
+				bottom: 300px;
+				left: 50px;
+				float: left;
+			}
+
+			.submit {
+				width: 200px;
+				height: 300px;
+				background-color: #FFFF00;
+				position: relative;
+				left: 1250px;
+				bottom: 400px;
+				border-radius: 4px;
+			}
+
+			.submit img {
+				position: relative;
+				left: 70px;
+				top: 60px;
+				float: left;
+
+			}
+
+			.submit1 {
+				width: 200px;
+				height: 100px;
+				background-color: #FF0000;
+				border-radius: 4px;
+			}
+
+			.submit2 {
+				float: left;
+				width: 200px;
+				height: 200px;
+				background-color: #FFFFFF;
+				border-radius: 4px;
+				padding-top: 10px;
+			}
+
+			.submit2 p {
+				font-size: 10px;
+				/*
+				margin-left: 50px;
+				 */
+				position: relative;
+				margin-top: 35px;
+				text-align: center;
+			}
+
+			.submit2 input {
+				/* text-align: center; */
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 5px;
+				margin-top: 5px;
+				border: 1px solid #d2d2d2;
+			}
+
+			button {
+				font-size: 0.42rem;
+				font-family: Source Han Sans SC;
+				font-weight: 400;
+				color: #FFFFFF;
+				border-radius: 0.545rem;
+				background: #2D8EFF;
+				width: 7.272rem;
+				height: 1.8rem;
+				border: none;
+				/* cursor: pointe */
+				/* text-align: center; */
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				position: relative;
+				bottom: 5px;
+			}
+
+			.push {
+				font-size: 0.42rem;
+				font-family: Source Han Sans SC;
+				font-weight: 400;
+				color: #FFFFFF;
+				border-radius: 0.545rem;
+				background: #2D8EFF;
+				width: 7.272rem;
+				height: 1.8rem;
+				border: none;
+				/* cursor: pointe */
+				/* text-align: center; */
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				position: relative;
+				bottom: 150px;
+			}
+
+			.hsi {
+				font-family: "微软雅黑";
+				font－weight: normal;
+				text-align: center;
+				position: relative;
+				top: 273px;
+				right: 625px;
+			}
+
+			h4 {
+				font-family: "微软雅黑";
+				font－weight: normal;
+				text-align: center;
+				position: relative;
+				top: 50px;
+				/* right: 350px; */
+			}
+
+			.login4 {
+				font-size: 0.42rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #666666;
+				text-align: center;
+				padding: 3.36rem 0 1.18rem 0;
+
+			}
+
+			.login5 {
+				font-size: 0.42rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #666666;
+				text-align: center;
+				padding: 17.36rem 0 1.18rem 0;
+			}
+
+			.nub,
+			.nub1,
+			.nub2,
+			.nub3,
+			.nub4,
+			.nub5 {
+				width: 50px;
+				height: 50px;
+				background-color: #2D8EFF;
+				margin-left: 83px;
+				text-align: center;
+				border-radius: 4px;
+				font-size: 10px;
+				padding: 5px 5px 5px 5px;
+				position: relative;
+				left: 300px;
+			}
+
+			hr {
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+
+			.count {
+				width: 1000px;
+				height: 251px;
+				float: left;
+				background-color: #FFFFFF;
+				margin-left: 250px;
+				box-shadow: 1px 1px 5px 1px #DCDDE0;
+			}
+
+			.count span {
+				width: 240px;
+				height: 90px;
+				position: relative;
+				top: 10px;
+				left: 15px;
+			}
+
+			.count1 {
+				font-size: 0.42rem;
+				color: #999999;
+
+			}
+
+			.count2 {
+				font-size: 0.42rem;
+				margin-left: 5px;
+				color: #999999;
+				text-decoration: line-through;
+			}
+
+			.count3 ul {
+				margin-left: 328px;
+				position: relative;
+				bottom: 50px;
+			}
+
+			.count4 ul {
+				margin-left: 540px;
+				float: left;
+				display: inline-block;
+				position: relative;
+				bottom: 135px;
+			}
+
+			.dot {
+				width: 90px;
+				height: 30px;
+				background-color: #2D8EFF;
+				margin-left: 83px;
+				text-align: center;
+				border-radius: 4px;
+				font-size: 10px;
+				padding: 3px 3px 3px 3px;
+				top: 50px;
+
+
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5 {
+				width: 310px;
+				height: 182px;
+				background-color: #FFFFFF;
+				box-shadow: 0 0 14px #ddd;
+			}
+
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5,
+			.zi {
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #333333;
+				font-size: 0.424rem;
+				padding-left: 15px;
+				line-height: 0.7rem;
+				padding-top: 3rem;
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5,
+			.zi2 {
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #333333;
+				font-size: 0.424rem;
+				padding-left: 1rem;
+				line-height: 1.5rem;
+				padding-top: 1rem;
+
+
+			}
+
+			h1 {
+				font-size: 2.81rem;
+				padding-left: 0.6rem;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: #F3F3F3;
+			}
+
+			.merits {
+
+				position: absolute;
+				left: 250px;
+				top: 1250px;
+			}
+
+			.merits1 {
+				position: absolute;
+				left: 600px;
+				top: 1250px;
+			}
+
+			.merits2 {
+				position: absolute;
+				left: 950px;
+				top: 1250px;
+			}
+
+			.merits3 {
+				position: absolute;
+				left: 600px;
+				top: 1000px;
+			}
+
+			.merits4 {
+				position: absolute;
+				left: 950px;
+				top: 1000px;
+			}
+
+			.merits5 {
+				position: absolute;
+				left: 250px;
+				top: 1000px;
+
+			}
+
+			.Number {
+				margin-right: 2%;
+				font-weight: 700;
+			}
+
+			.Number span {
+				margin-left: 7.5%;
+				color: #333333;
+				font-size: 0.6rem;
+			}
+
+			.login-1 {
+				font-size: 1.5rem;
+				text-align: center;
+				/* padding-top: 29.5rem; */
+				color: #111111;
+			}
+
+			.login-2 {
+				font-size: 0.42rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #666666;
+				text-align: center;
+				padding: 0.36rem 0 0.88rem 0;
+			}
+
+			.nav_box {
+				border: 2px solid plum;
+				width: 1000px;
+				height: 500px;
+				/*这里给最大的div（容器），加上紫色的边框、宽度为2像素，边框是实线*/
+			}
+
+			.logo {
+				width: 100px;
+				/*加上宽度100像素*/
+				height: 50px;
+				/*加上高度50像素*/
+				line-height: 50px;
+				/*加上行高50像素，这个 行高=高度时 可以使里面的字垂直居中*/
+				background-color: red;
+				/*背景设置成红色，方便观察*/
+				float: left;
+				/*给logo盒子，加上做一个左浮动，*/
+				margin-left: 380px;
+			}
+
+			.logo2 {
+				width: 100px;
+				/*加上宽度100像素*/
+				height: 50px;
+				/*加上高度50像素*/
+				line-height: 50px;
+				/*加上行高50像素，这个 行高=高度时 可以使里面的字垂直居中*/
+				background-color: red;
+				/*背景设置成红色，方便观察*/
+				float: right;
+				/*给logo盒子，加上做一个右浮动，*/
+				margin-right: 380px;
+			}
+
+			ul li {
+				list-style: none;
+			}
+
+			/* body,
+			html {
+				width: 100%;
+				height: 100%;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+ */
+			#body_right {
+				width: calc(100% - 200px);
+				float: left;
+				min-height: 100%;
+				display: inline-block;
+				vertical-align: top;
+				background: #f3faff;
+				font-size: 32px;
+				color: #999;
+				text-align: center;
+			}
+
+			.body_left {
+				padding: 0;
+				width: 200px;
+				min-height: 100%;
+				display: inline-block;
+				background: #333951;
+				float: left;
+				font-size: 16px;
+				color: #fff;
+			}
+
+			.body_wai {
+				width: 100%;
+				height: 100%;
+			}
+
+			.body_wai ul li {
+				font-size: 20px;
+			}
+
+			.biao1 {
+				display: none;
+			}
+
+			.bi:hover .biao1 {
+				transition-duration: 0.5s;
+				display: block;
+			}
+
+			.biao2 {
+				display: none;
+			}
+
+			.bi:hover .biao2 {
+				transition-duration: 0.5s;
+				display: block;
+			}
+
+			.bi:hover #er {
+				transition-duration: 0.5s;
+				background-color: #151B32;
+				border-left-width: 6px;
+				border-left-style: solid;
+				border-left-color: #1d8ff0;
+				cursor: pointer;
+			}
+
+			.bi:hover #cla {
+				transition-duration: 0.5s;
+				background-color: #3A3E50;
+			}
+
+			.bi2:hover #cla {
+				transition-duration: 0.5s;
+				background-color: #3A3E50;
+			}
+
+			#yiji {
+				background-color: #292E41;
+				width: 100%;
+			}
+
+			.bi2:hover .biao2 {
+				transition-duration: 0.5s;
+				display: block;
+			}
+
+			.bi2:hover #er {
+				transition-duration: 0.5s;
+				background-color: #151B32;
+			}
+
+			#cla {
+				color: gray;
+			}
+
+			#cla:hover {
+				color: white;
+			}
+
+			#er {
+				padding-left: 10%;
+			}
+
+			#cla {
+				padding-left: 20%;
+			}
+
+			.bjing {
+				margin-top: 29.5rem;
+				background-size: 100% 100%;
+				background-image: url(../img/jiejuefangan.png);
+				background-repeat: no-repeat;
+				background-clip: border-box;
+				height: 500px;
+			}
+
+			/*选择 .nav 下面的 ul 下面的 li*/
+			/* .nav ul li{ */
+			/* list-style: none; */
+			/*去除 li的*/
+
+			/* float: left; */
+			/*这里给li做的左浮动，可以让li横排显示*/
+			/* width: 100px;
+						height: 50px;
+						line-height: 50px; */
+			/*设置宽、高、行高*/
+			/* background-color:orange; */
+			/*背景橘色*/
+			/* border: 1px solid black; */
+			/*加一个1像素的黑色实线边框*/
+			/* text-align: center; */
+			/*让里面的字。水平居中*/
+			/* } */
+			.wrap {
+				margin: 20px auto;
+				width: 603px;
+				height: 400px;
+				border: 1px solid brown;
+
+			}
+
+			label {
+				width: 100px;
+				height: 30px;
+				float: left;
+				text-align: center;
+				line-height: 30px;
+				/* 	border-right: 1px solid brown;
+				border-bottom: 1px solid brown; */
+			}
+
+			label:nth-of-type(4) {
+				border-right: none;
+			}
+
+			label span {
+				cursor: pointer;
+			}
+
+			label div {
+				/* 	width: 603px;
+				height: 368px; */
+				position: absolute;
+				left: 0;
+				top: 31px;
+				background: #eeeeee;
+				display: none;
+			}
+
+			label input {
+				width: 0;
+			}
+
+			input:checked+div {
+				display: block;
+			}
+
+			.cjwt {
+				width: 3000;
+				height: 300px;
+				background-color: #2D8EFF;
+			}
+
+			.questions {
+				width: 100%;
+				height: 340px;
+				background-color: #FFFFFF;
+			}
+
+			.questions-1 {
+				width: 542px;
+				height: 340px;
+				background-color: #FFFFFF;
+				float: left;
+				margin-left: 260px;
+			}
+
+			.questions-2 {
+				width: 542px;
+				height: 340px;
+				background-color: #FFFFFF;
+				margin-left: 800px;
+
+			}
+
+			.questions-img img {
+				width: 135px;
+				height: 93px;
+			}
+
+			.questions-p {
+				padding-bottom: 20px;
+			}
+
+			.questions-img span {
+				position: relative;
+				bottom: 100px;
+				left: 150px;
+			}
+
+			.questions-span p {
+				position: relative;
+				top: 30px;
+				right: 145px;
+				margin-top: 10px;
+			}
+
+			.underneath {
+				width: 100%;
+				height: 600px;
+				background-color: rgb(51, 55, 69);
+				margin-top: 20px;
+			}
+
+			.underneath span {
+				width: 150px;
+				height: 200px;
+				color: #FFFFFF;
+				font-size: 15px;
+				position: relative;
+				top: 30px;
+
+			}
+
+			.underneath-1 {
+				position: relative;
+				left: 200px;
+			}
+
+			.underneath-1 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-2 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-3 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-4 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-2 {
+				position: relative;
+				left: 380px;
+			}
+
+			.underneath-3 {
+				position: relative;
+				left: 580px;
+			}
+
+			.underneath-4 {
+				position: relative;
+				left: 680px;
+			}
+
+			a,
+			address,
+			b,
+			big,
+			blockquote,
+			body,
+			center,
+			cite,
+			code,
+			dd,
+			del,
+			div,
+			dl,
+			dt,
+			em,
+			fieldset,
+			font,
+			form,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			html,
+			i,
+			iframe,
+			img,
+			ins,
+			label,
+			legend,
+			li,
+			ol,
+			p,
+			pre,
+			small,
+			span,
+			strong,
+			u,
+			ul,
+			var {
+				padding: 0;
+				margin: 0;
+			}
+
+
+			a {
+				color: black;
+				text-decoration: none;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			#tab {
+				width: 900px;
+				height: 280px;
+				background-color: #FFFFFF;
+				border: 1px solid #ddd;
+				box-shadow: 0 0 2px #ddd;
+				position: relative;
+				margin: 20px 0 200px 280px;
+				/*处理超出的内容*/
+				overflow: hidden;
+
+			}
+
+			/*选项卡的头部*/
+			#tab-header {
+				background-color: #F7F7F7;
+				height: 33px;
+				text-align: center;
+				position: relative;
+			}
+
+			#tab-header ul {
+				width: 500px;
+				position: absolute;
+				left: -1px;
+			}
+
+			#tab-header ul li {
+				float: left;
+				width: 98px;
+				height: 33px;
+				line-height: 33px;
+				padding: 0 1px;
+				border-bottom: 1px solid #dddddd;
+			}
+
+			#tab-header ul li.selected {
+				background-color: white;
+				font-weight: bolder;
+				border-bottom: 0;
+				border-left: 1px solid #dddddd;
+				border-right: 1px solid #dddddd;
+				padding: 0;
+
+			}
+
+			#tab-header ul li:hover {
+				color: orangered;
+			}
+
+			/*主要内容*/
+			#tab-content .dom {
+				display: none;
+			}
+
+			#tab-content .dom ul li {
+				float: left;
+				/*background-color: red;*/
+				margin: 15px 10px;
+				width: 225px;
+			}
+
+			#tab-content .dom ul li a:hover {
+				color: orange;
+			}
+
+			.bottom-1 {
+				float: left;
+				margin-left: 200px;
+				margin-top: 100px;
+
+			}
+
+			.bottom-1 p {
+				padding-top: 20px;
+
+			}
+
+			.bottom-2 {
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-2 p {
+				padding-top: 20px;
+			}
+
+			.bottom-3 {
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-3 p {
+				padding-top: 20px;
+			}
+
+			.bottom-4 {
+				width: 400px;
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-4 p {
+				padding-top: 20px;
+			}
+
+			.bottom-5 {
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-5 img {
+				width: 150px;
+				height: 150px;
+				margin-top: 40px;
+			}
+
+			.sign {
+				font-size: 20px;
+			}
+
+			.total {
+				right: 445px;
+				width: 300px;
+				height: 50px;
+				background-color: #D9ECFF;
+			}
+
+			.total-1 {
+				right: 125px;
+				bottom: 70px;
+				width: 300px;
+				height: 50px;
+				background-color: #D9ECFF;
+			}
+
+
+
+
+
+			/* 窗口控件 */
+
+			/* 滑动导航栏 */
+
+			#fixed #nav {
+				width: 100%;
+				height: 64px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background-color: white;
+				display: none;
+				align-items: center;
+				z-index: 99;
+			}
+
+			#fixed #nav>.w {
+				height: calc(100% - 2px);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			#fixed #nav ul {
+				height: 100%;
+				display: flex;
+			}
+
+			#fixed #nav li {
+				padding: 20px;
+				box-sizing: border-box;
+				height: 100%;
+				font-size: 13px;
+			}
+
+			#fixed li.state {
+				border-bottom: 3px solid #54A3FF;
+			}
+
+			#fixed .blue {
+				color: #54A3FF;
+			}
+
+			#fixed li.button-box {
+				display: flex;
+				align-items: center;
+				margin-top: 5px;
+			}
+
+			#fixed li.button-box>button.debuts-bt {
+				background-color: #2983EF;
+				width: 80px;
+				height: 30px;
+				margin: 0;
+				border-radius: 30px;
+				border: none;
+				color: white;
+				margin-left: 20px;
+			}
+
+			#fixed li.button-box>button.login-bt {
+				color: #2983EF;
+				width: 80px;
+				height: 30px;
+				border-radius: 30px;
+				border: 1px solid #2983EF;
+				background-color: white;
+				margin: 0 20px 0 6px;
+			}
+
+			/* 左上角悬浮窗 */
+
+			#fixed .cs {
+				z-index: 9999;
+				width: 56px;
+				height: 122px;
+				position: fixed;
+				top: 240px;
+				left: 20px;
+				background-color: white;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid #eee;
+				box-sizing: border-box;
+			}
+
+			#fixed .cs>span {
+				color: #534bd9;
+				font-size: 13px;
+				Writing-mode: tb-rl;
+			}
+
+			#fixed .cs-img {
+				width: 22px;
+				height: 22px;
+			}
+
+			#fixed .fixed-code {
+				width: 177px;
+				height: 216px;
+				background-color: white;
+				border-radius: 4px;
+				position: fixed;
+				top: 240px;
+				left: 80px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border: 1px solid #eee;
+				box-sizing: border-box;
+				z-index: 9999;
+			}
+
+			#fixed .phone-box {
+				width: 50px;
+				height: 46px;
+			}
+
+			#fixed .fixed-code-top {
+				padding: 10px 0;
+				display: flex;
+				align-items: center;
+				font-size: 14px;
+				font-weight: bold;
+			}
+
+			#fixed .fixed-code-img {
+				margin-top: 5px;
+				width: 110px;
+				height: 110px;
+			}
+
+			/* 留言板 */
+
+			#fixed .fixed-message {
+				width: 240px;
+				border-radius: 5px;
+				background-color: white;
+				position: fixed;
+				bottom: 10px;
+				left: 20px;
+				box-shadow: 0px 0px 20px 0px #444444;
+				overflow: hidden;
+				z-index: 99999;
+			}
+
+			#fixed .fixed-message>.title,
+			#fixed .fixed-online-message-title {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 15px;
+				box-sizing: border-box;
+				height: 46px;
+				background-color: #4e6ef2;
+				color: white;
+				font-size: 14px;
+			}
+
+			#fixed .fixed-message>ul {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				height: calc(366px - 46px);
+				padding: 5px 15px;
+				box-sizing: border-box;
+			}
+
+			#fixed .fixed-message li>* {
+				width: 210px;
+				height: 100%;
+				border: 1px solid #DCDFE6;
+				border-radius: 5px;
+				padding: 10px 12px;
+				box-sizing: border-box;
+			}
+
+			#fixed .fixed-message li {
+				heght: 35px;
+				position: relative;
+			}
+
+			#fixed .fixed-message input {
+				text-indent: 20px;
+			}
+
+			#fixed .fixed-message li>img {
+				position: absolute;
+				top: 50%;
+				left: 0px;
+				transform: translateY(-50%);
+				width: 36px;
+				height: 32px;
+				border: none;
+			}
+
+			#fixed .fixed-message button {
+				border: none;
+				background-color: #4e6ef2;
+				width: 64px;
+				height: 32px;
+				border-radius: 5px;
+				color: white;
+				padding: 0;
+				font-size: 12px;
+			}
+
+			/* 在线咨询宣传页 */
+
+			#fixed .fixed-online {
+				width: 190px;
+				height: 244px;
+				background-color: white;
+				border: 1px solid #00aef3;
+				position: fixed;
+				top: 350px;
+				right: 2px;
+				z-index: 9999;
+			}
+
+			#fixed .fixed-online-title {
+				width: 100%;
+				height: 61px;
+				background-color: #00aef3;
+				text-align: center;
+				padding: 5px 0;
+				box-sizing: border-box;
+			}
+
+			#fixed .fixed-online-title>img {
+				width: 130px;
+				height: 45px;
+			}
+
+			#fixed .fixed-online ul {
+				height: calc(100% - 61px);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				padding: 5px 0;
+				box-sizing: border-box;
+			}
+
+			#fixed .fixed-online li {
+				width: 168px;
+				height: 33px;
+				border-radius: 16px;
+				background-color: #d6f3ff;
+				position: relative;
+				border: 1px solid #00aef3;
+				box-sizing: border-box;
+				color: #008edf;
+				font-size: 12px;
+				text-indent: 38px;
+				line-height: 250%;
+			}
+
+			#fixed .fixed-online li>img {
+				width: 31px;
+				height: 31px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			/* 在线咨询对话框 */
+
+			#fixed .fixed-online-message {
+				width: 360px;
+				border-radius: 7px;
+				background-color: white;
+				position: fixed;
+				bottom: 10px;
+				right: 20px;
+				box-shadow: 0px 0px 20px 0px #444444;
+				overflow: hidden;
+				z-index: 9999;
+			}
+
+			#fixed .message {
+				height: 281px;
+				width: 100%;
+				border-bottom: 1px solid #eee;
+				box-sizing: border-box;
+				overflow-Y: scroll;
+				padding: 10px;
+				box-sizing: border-box;
+			}
+
+			#fixed .message-box {
+				width: 100%;
+			}
+
+			#fixed .message::-webkit-scrollbar-thumb {
+				width: 5px;
+				height: 20px;
+				background-color: #b5b5b5;
+				border-radius: 10px;
+			}
+
+			#fixed .message::-webkit-scrollbar {
+				width: 5px;
+				background-color: white;
+			}
+
+			#fixed .chat-box {
+				width: 100%;
+				height: calc(188px - 46px);
+				position: relative;
+			}
+
+			#fixed .xbt-1 {
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+				/* background-image: url(../home/home.img/xbt.png); */
+				background-position: 0px 0px;
+				background-repeat: no-repeat;
+				background-size: 300px 135px;
+				width: 20px;
+				height: 20px;
+			}
+
+			#fixed .xbt-2 {
+				position: absolute;
+				bottom: 10px;
+				left: 50px;
+				/* background-image: url(../home/home.img/xbt.png); */
+				background-position: -95px 0px;
+				background-repeat: no-repeat;
+				background-size: 305px 135px;
+				width: 20px;
+				height: 20px;
+			}
+
+			#fixed .chat-box>textarea {
+				width: 100%;
+				height: calc(100% - 35px);
+				font-size: 14px;
+				border: none;
+				padding: 10px;
+			}
+
+			#fixed .chat-box>button {
+				width: 60px;
+				height: 30px;
+				background-color: #4e6ef2;
+				border: none;
+				border-radius: 5px;
+				color: white;
+				font-size: 12px;
+				text-align: center;
+				line-height: 250%;
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+			}
+
+			#fixed .information {
+				height: 40px;
+				display: flex;
+				align-items: center;
+				color: white;
+				font-size: 12px;
+			}
+
+			#fixed li.phone {
+				display: flex;
+				align-items: center;
+				text-align: center;
+			}
+
+			#fixed li.phone>.number {
+				color: #2d8dff;
+				font-weight: bold;
+				font-size: 16px;
+			}
+		</style>
+		<!-- <link rel="stylesheeta" type="text/css" href="../css/login.css" /> -->
+		<!-- <script type="text/javascript" src="c."></script> -->
+
+	</head>
+	<body>
+		<div class="quanbu">
+
+
+
+			<div id="fixed">
+
+				<!-- 窗口控件 -->
+
+				<!-- 滑动导航栏 -->
+
+				<div id="nav">
+					<div class="w">
+						<div class="information">
+							<div class="logo-box fl">
+								<img src="../img/fixed-logo.png" />
+							</div>
+							<span style="color: black; font-size: 12px;">
+								浙江伽搜科技有限公司<br />
+								浙江/福建/江西授权服务中心
+							</span>
+						</div>
+						<ul>
+							<li class="state"><a href="首页.html" class="blue">首页</a></li>
+							<li><a href="开通基础版.html">开通基础版</a></li>
+							<li><a href="申请试用.html">申请试用</a></li>
+							<li><a href="优惠活动.html">优惠活动</a></li>
+							<li><a href="技术支持.html">技术支持</a></li>
+							<li class="button-box" style="padding: 0;">
+								<button class="debuts-bt">立即开通</button>
+								<button class="login-bt">登录入口</button>
+							</li>
+							<li class="phone" style="margin: 0px 10px 0px 35.4px; padding: 0;">
+								<div class="phone-box" style="width: 13px; height: 13px;">
+									<img src="../img/phone2.png" class="fl" />
+								</div>
+								<div class="number ">400-0333-580</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 左上悬浮窗 -->
+
+				<div class="cs">
+					<div class="cs-img"><img src="../img/float2.png" /></div>
+					<span>&nbsp;快&nbsp;速&nbsp;开&nbsp;通</span>
+				</div>
+
+				<div class="fixed-code">
+					<div class="fixed-code-top clearfix">
+						<div class="phone-box fl"><img src="../img/float3%20(1).png" class="fl" /></div>
+						<span>微信扫一扫</span>
+					</div>
+					<div class="fixed-code-img"><img src="../img/erweima.png" /></div>
+				</div>
+
+
+
+				<div class="fixed-message">
+					<div class="title">
+						<span>留言板</span>
+						<div class="minus" id="left" data-id="1">
+							<img src="../img/001.png" id="left-hide" style="cursor: pointer;" />
+							<img src="../img/001.png" id="left-show" style="display: none; cursor: pointer;" />
+						</div>
+					</div>
+					<ul id="left-content">
+						<li style="height: 80px;">
+							<textarea placeholder="请在此输入留言内容，我们会尽快与您联系。(必填)"></textarea>
+						</li>
+						<li>
+							<input type="text" placeholder="姓名（必填）">
+							<img src="../img/xm.png" />
+						</li>
+						<li>
+							<input type="text" placeholder="电话（必填）">
+							<img src="../img/sj.png" />
+						</li>
+						<li>
+							<input type="text" placeholder="公司名称">
+							<img src="../img/gs.png" />
+						</li>
+						<li>
+							<input type="text" placeholder="域名">
+							<img src="../img/gs.png" />
+						</li>
+						<li style="align-self: flex-end;"><button type="button">发送</button></li>
+					</ul>
+				</div>
+
+				<!-- 在线咨询宣传页 -->
+
+				<div class="fixed-online">
+					<div class="fixed-online-title">
+						<img src="../img/iconWord0%20(1).png" />
+					</div>
+					<ul>
+						<li>
+							<img src="../img/icondisable.png" />
+							买3年送3年
+						</li>
+						<li>
+							<img src="../img/icondisable.png" />
+							买5年送5年
+						</li>
+						<li>
+							<img src="../img/icondisable.png" />
+							基础班升级
+						</li>
+						<li>
+							<img src="../img/icondisable.png" />
+							售后技术支持
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="login" style="background: #F3F7FD;">
+
+				<ul style="white-space: nowrap; ">
+					<li>
+						<a href="#" class="login2-1">立即开通</a>
+					</li>
+					<li>
+						<a href="#" class="login2-2">七天免费试用</a>
+
+					</li>
+					<li>
+						<a href="#" class="login2-3">登录入口</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="banner-wrapper">
+
+				<ul class="banner ">
+					<li style="background-image: url(../img/banner3.png);" class="show"></li>
+					<li style="background-image: url(../img/banner2.png);"></li>
+					<li style="background-image: url(../img/banner_new.png);"></li>
+				</ul>
+				<div class="navigation">
+					<!-- 导航栏 -->
+					<p class="login1">
+						<img class="built" src="../img/logo.png" />
+						<span class="ziti">
+							浙江伽搜科技有限公司 <br />
+							浙江/福建/江西授权服务中心
+						</span>
+					</p>
+					<!-- 导航列表 -->
+					<ul class="navigation1">
+						<li>
+							<a href="首页.html">首页</a>
+						</li>
+						<li>
+							<a href="企业邮箱.html">企业邮箱</a>
+						</li>
+						<li>
+							<a href="在线购买.html">在线购买</a>
+						</li>
+						<li>
+							<a href="优惠活动.html">优惠活动</a>
+						</li>
+						<li>
+							<a href="解决方案.html">解决方案</a>
+						</li>
+						<li>
+							<a href="技术支持.html">技术支持</a>
+						</li>
+						<li>
+							<a href="开通基础版.html">开通基础版</a>
+						</li>
+						<li class="photo1">
+							<img src="../img/phone.png" alt="400-0333-580" />400-0333-580
+						</li>
+					</ul>
+				</div>
+				<ul class="indicators">
+					<li class="active"></li>
+
+					<li></li>
+
+					<li></li>
+				</ul>
+
+				<div class="submit">
+					<img src="../img/inpimg.png" />
+					<div class="submit1"></div>
+					<div class="submit2">
+						<p>立即开通试用</p>
+						<input type="text" placeholder="请输入姓名" />
+						<input type="text" placeholder="请输入姓名" />
+						<input type="text" placeholder="请输入姓名" />
+						<input type="text" placeholder="请输入姓名" />
+						<button>提交申请</button>
+
+					</div>
+				</div>
+			</div>
+			<h4>腾讯企业邮箱价格</h4>
+			<p class="login4">
+				腾讯企业邮箱5折优惠大促，免费赠送域名及企业微信
+			</p>
+
+			<span class="nub">100用户</span>
+			<span class="nub1">100用户</span>
+			<span class="nub2">100用户</span>
+			<span class="nub3">100用户</span>
+			<span class="nub4">100用户</span>
+			<span class="nub5">100用户</span>
+			<hr color="#2D8EFF" width="980" />
+			<div class="count">
+				<span>
+					<span>限时特惠</span> <span style="color: #2D8EFF; font-size: 40px;">50505</span>
+					<span style="color: blue;">元/年</span> <br>
+					<span class="count1">原价</span><span class="count2">66666</span>
+				</span>
+				<div
+					style="border: 0.01px solid;color: darkgray; float:left;height:97px;position: relative;left:295px ;bottom: 37px;">
+				</div>
+
+				<div class="count3">
+					<ul>
+						<li>
+							<!-- <i>
+								<img src="../img/duihao.png" />
+							</i> -->
+							无限邮箱容量
+						</li>
+						<li>
+							免费开通企业微信
+						</li>
+						<li>
+							32G超大附件
+						</li>
+						<li>
+							个性化登陆页面
+						</li>
+
+
+					</ul>
+
+				</div>
+				<div class="count4">
+					<ul>
+						<li>
+							<!-- <i>
+									<img src="../img/duihao.png" />
+								</i> -->
+							赠送专属域名，一键开通
+						</li>
+						<li>
+							支持邮件撤回，邮件审批
+						</li>
+						<li>
+							支持邮件备份，邮件归档
+						</li>
+						<li>
+							关联微信和邮箱账号
+
+						</li>
+
+
+					</ul>
+				</div>
+				<div>
+					<button class="push">
+						<a href="#">立即资讯</a>
+					</button>
+					<button class="push">
+						<a href="#">免费申请试用</a>
+					</button>
+				</div>
+				<hr style="color: #D2D2D2; width: 980px; position: relative;bottom: 130px;" />
+				<p style="position: relative;bottom: 115px;left: 260px;">每用户每天不足<span
+						style="color: crimson;font-size: 25px;position: relative; left: 1px;top: 0px;font-weight: 700;">0.1元</span>即可享受专业、放心的企业邮箱服务
+					<button class="total">
+						<span
+							style="font-size: 20px;color: #000000;position: relative;top: 0px; left: -30px;">账号数（个）</span>
+						<span><img class="totalsrc" style="width: 20px; height: 20px; background-color: #1D8FF0;"
+								src="../img/jia.png" /><span
+								style="font-size: 15px; color: #000000;left: 0px; top: -3px;"> 500</span>
+						</span>
+						<span><img class="totalsrc" style="width: 20px; height: 20px; background-color: #1D8FF0;"
+								src="../img/jia.png" />
+						</span>
+					</button>
+					<button class="total-1">
+						<span
+							style="font-size: 20px;color: #000000;position: relative;top: 0px; left: -50px;">年限（年）</span>
+						<span><img class="totalsrc" style="width: 20px; height: 20px; background-color: #1D8FF0;"
+								src="../img/jia.png" /><span
+								style="font-size: 15px; color: #000000;left: 0px; top: -3px;"> 5</span>
+						</span>
+						<span><img class="totalsrc" style="width: 20px; height: 20px; background-color: #1D8FF0;"
+								src="../img/jia.png" />
+						</span>
+					</button>
+				</p>
+
+			</div>
+		</div>
+
+		<div class="quanbu1">
+
+			<h4 class="hsi">腾讯企业邮箱价格</h4>
+			<div style="float: left; width: 120px;">
+
+				<div id="div1"
+					style="border: solid 1px gray; width: 145px; height: 229px; background-color: #FFFFFF; position: absolute; left: 1350px;">
+
+					<div class="sure" style="background-color: #2D8EFF;">
+						<img src="../img/iconWord0%20(1).png">
+					</div>
+					<button style="background-color: #409EFF;border-radius:0.9375rem ;width:130px ;">买3年送3年</button>
+					<button style="background-color: #409EFF;border-radius:0.9375rem ;width:130px ;">买5年送5年</button>
+					<button style="background-color: #409EFF;border-radius:0.9375rem ;width:130px ;">基础版升级</button>
+					<button style="background-color: #409EFF;border-radius:0.9375rem ;width:130px ;">售后技术支持</button>
+				</div>
+			</div>
+			<p class="login5">
+				腾讯企业邮箱5折优惠大促，免费赠送域名及企业微信
+			</p>
+			<div class="merits" onmouseover="over(this)" onmouseleave="leave(this)">
+				<h1>01</h1>
+				<p class="zi">
+					<img src="../img/cpsj1.png" />
+					<span style="font-size: 17px;position: relative;bottom: 5px;">移动应用，高效协作</span>
+				</p>
+				<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+			</div>
+			<div class="merits1" onmouseover="over(this)" onmouseleave="leave(this)">
+				<h1>02</h1>
+				<p class="zi">
+					<img src="../img/cpsj1.png" />
+					<span style="font-size: 17px;position: relative;bottom: 5px;">移动应用，高效协作</span>
+				</p>
+				<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+			</div>
+			<div class="merits2" onmouseover="over(this)" onmouseleave="leave(this)">
+				<h1>03</h1>
+				<p class="zi">
+					<img src="../img/cpsj1.png" />
+					<span style="font-size: 17px;position: relative;bottom: 5px;">移动应用，高效协作</span>
+				</p>
+				<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+			</div>
+			<div class="merits3" onmouseover="over(this)" onmouseleave="leave(this)">
+				<h1>05</h1>
+				<p class="zi">
+					<img src="../img/cpsj1.png" />
+					<span style="font-size: 17px;position: relative;bottom: 5px;">移动应用，高效协作</span>
+				</p>
+				<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+			</div>
+			<div class="merits4" onmouseover="over(this)" onmouseleave="leave(this)">
+				<h1>06</h1>
+				<p class="zi">
+					<img src="../img/cpsj1.png" />
+					<span style="font-size: 17px;position: relative;bottom: 5px;">移动应用，高效协作</span>
+				</p>
+				<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+			</div>
+			<div class="merits5" onmouseover="over(this)" onmouseleave="leave(this)">
+				<h1>04</h1>
+				<p class="zi">
+					<img src="../img/cpsj1.png" />
+					<span style="font-size: 17px;position: relative;bottom: 5px;">移动应用，高效协作</span>
+				</p>
+				<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+			</div>
+
+			<div class="bjing">
+				<p class="login-1">腾讯企业邮箱解决方案</p>
+
+				<p class="login-2">
+					了解这些企业如何用腾讯企业邮箱提升办公效率，我们客户的成功就是我们的成功！
+				</p>
+
+				<!-- 先来做一个大的容器 -->
+				<!-- <div class="nav_box"> -->
+				<div id="tab">
+					<!--选项的头部-->
+					<div id="tab-header">
+						<ul>
+							<li class="selected">公告</li>
+							<li>规则</li>
+							<li>完美</li>
+							<li>功劳</li>
+							<li>产品</li>
+							<!--<li>技术</li>-->
+						</ul>
+					</div>
+					<!--主要内容-->
+					<div id="tab-content">
+						<div class="dom" style="display: block;">
+							<ul>
+								<li><a href="#">数据七夕:金牛爱送玫瑰</a></li>
+								<li><a href="#">阿里打造"互联网监管"</a></li>
+								<li><a href="#">10万家店60万新品</a></li>
+								<li><a href="#">全球最大网上时装周</a></li>
+							</ul>
+						</div>
+						<div class="dom">
+							<ul>
+								<li>
+									<a href="#">“全额返现”要管控啦</a>
+								</li>
+								<li>
+									<a href="#">淘宝新规发布汇总(7月)</a>
+								</li>
+								<li>
+									<a href="#">炒信规则调整意见反馈</a>
+								</li>
+								<li>
+									<a href="#">质量相关规则近期变更</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dom">
+							<ul>
+								<li>
+									<a href="#">阿里建商家全链路服务</a>
+								</li>
+								<li>
+									<a href="#">个性化的消费时代来临</a>
+								</li>
+								<li>
+									<a href="#">跨境贸易是中小企业机</a>
+								</li>
+								<li>
+									<a href="#">美妆行业虚假信息管控</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dom">
+							<ul>
+								<li>
+									<a href="#">接次文件，毁了一家店</a>
+								</li>
+								<li>
+									<a href="#">账号安全神器阿里钱盾</a>
+								</li>
+								<li>
+									<a href="#">新版阿里110上线了</a>
+								</li>
+								<li>
+									<a href="#">卖家学违禁避免被处罚</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dom">
+							<ul>
+								<li>
+									<a href="#">为了公益high起来</a>
+								</li>
+								<li>
+									<a href="#">魔豆妈妈在线申请</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="questions">
+				<div class="questions-1">
+					<h6 style="font-size: 20px;margin-bottom: 10px;">常见问题</h6>
+					<div class="questions-img"><img src="../img/1631608348688%20(1).png">
+						<span>
+							<p class="questions-p">腾讯企业邮箱国庆特惠推送</p>
+							<p> 喜迎国庆，欢庆中秋，在此佳节来临之际，腾讯企 <br />业邮箱特推 出以下优惠政策：活动1：购买赠送年<br />限；活动2：购买送超值 好礼；活动3：免费开通 <br />
+								企业微信
+							</p>
+						</span>
+						<span class="questions-span">
+							<p> 腾讯企业邮箱618钜惠来袭</p>
+							<p>购买腾讯企业邮箱赠送域名+企业微信</p>
+							<p>腾讯企业邮箱如何启用微信动态密码登录</p>
+							<p>腾讯企业邮箱如何查阅归档邮件 </p>
+							<p>腾讯企业邮箱与企业微信共享同一套账号体系</p>
+						</span>
+
+					</div>
+				</div>
+				<div class="questions-2">
+					<h6 style="font-size: 20px;margin-bottom: 10px;">常见问题</h6>
+					<div class="questions-img"><img src="../img/1631608348688%20(1).png">
+						<span>
+							<p class="questions-p">腾讯企业邮箱国庆特惠推送</p>
+							<p> 喜迎国庆，欢庆中秋，在此佳节来临之际，腾讯企业<br />邮箱特推 出以下优惠政策：活动1：购买赠送年<br />限；活动2：购买送超值 好礼；活动3：免费开通 <br />
+								企业微信
+							</p>
+						</span>
+						<span class="questions-span">
+							<p> 腾讯企业邮箱618钜惠来袭</p>
+							<p>购买腾讯企业邮箱赠送域名+企业微信</p>
+							<p>腾讯企业邮箱如何启用微信动态密码登录</p>
+							<p>腾讯企业邮箱如何查阅归档邮件 </p>
+							<p>腾讯企业邮箱与企业微信共享同一套账号体系</p>
+						</span>
+
+					</div>
+				</div>
+			</div>
+			<div class="underneath">
+				<span class="underneath-1"><img src="../img/footer1%20(1).png" /> 8000万企业信赖之选</span>
+				<span class="underneath-2"><img src="../img/footer2.png" />30天免费试用</span>
+				<span class="underneath-3"><img src="../img/footer3.png" />1对1专属客服</span>
+				<span class="underneath-4"><img src="../img/footer4.png" />7x24小时服务</span>
+				<hr style="color: #C0C4CC; width: 1510px; position: relative; top: 60px;" />
+				<div><span class="bottom-1">
+						<p class="sign">企业邮箱</p>
+						<p>产品优势</p>
+						<p>管理功能</p>
+						<p>使用功能</p>
+						<p>整合方案</p>
+					</span>
+					<span class="bottom-2">
+						<p class="sign">技术支持</p>
+						<p>常见问题</p>
+						<p>帮助中心</p>
+						<p>行业动态</p>
+						<p>客户案例</p>
+						<p>客户端设置</p>
+						<p>友情链接</p>
+					</span>
+					<span class="bottom-3">
+						<p class="sign">解决方案</p>
+						<p>产品集成</p>
+						<p>客户案例</p>
+
+					</span>
+					<span class="bottom-4">
+						<p class="sign">关于伽搜</p>
+						<p>电话：400-0333-580</p>
+						<p>地址：浙江省杭州市西湖区紫金创业园501-8室</p>
+						<p>邮箱：order@jasoso.com</p>
+
+					</span>
+					<span class="bottom-5">
+						<p class="sign">售后客服</p>
+						<img src="../img/erweima.png" />
+					</span>
+				</div>
+				<hr style="color: #D2D2D2; width: 1510px; position: relative;top: 180px;" />
+				<p style="color: #FFFFFF;margin-left: 560px;margin-top: 200px;">浙江伽搜科技有限公司版权所有@1997-2020
+					·浙ICP备14025588号-7</p>
+			</div>
+
+
+		</div>
+	</body>
+
+	<script>
+		var curIndex = 0;
+		var timer = null;
+
+		function toggle(nextIndex) {
+			var lis = document.querySelectorAll('ul.banner>li');
+			var indicators = document.querySelectorAll('ul.indicators>li');
+			lis[curIndex].classList.remove('show');
+			indicators[curIndex].classList.remove('active');
+			curIndex = nextIndex < 0 ? lis.length - 1 : nextIndex % lis.length;
+			lis[curIndex].classList.add('show');
+			indicators[curIndex].classList.add('active');
+		}
+		// 停止自动播放
+		document.querySelector('.banner-wrapper').onmouseenter = function() {
+			clearInterval(timer);
+		}
+		// 恢复自动播放
+		document.querySelector('.banner-wrapper').onmouseleave = function() {
+			timer = setInterval(function() {
+				toggle(curIndex + 1);
+			}, 3000);
+		}
+		// 指定切换
+		document.querySelectorAll('ul.indicators>li').forEach(function(indicators, i) {
+			indicators.onclick = function() {
+				toggle(i)
+			};
+		})
+		timer = setInterval(function() {
+			toggle(curIndex + 1);
+		}, 3000);
+		/* 鼠标经过触发事件 */
+		function over(x) {
+			x.style.backgroundColor = "#33CCFF";
+		}
+
+		function leave(x) {
+			x.style.backgroundColor = "#FFFFFF";
+		}
+
+		// == 值比较  === 类型比较 $(id) ---->  document.getElementById(id)
+		function $(id) {
+			return typeof id === 'string' ? document.getElementById(id) : id;
+		}
+
+		// 当页面加载完毕
+		window.onload = function() {
+			// 拿到所有的标题(li标签) 和 标题对应的内容(div)
+			var titles = $('tab-header').getElementsByTagName('li');
+			var divs = $('tab-content').getElementsByClassName('dom');
+			// 判断
+			if (titles.length != divs.length) return;
+			// 遍历
+			for (var i = 0; i < titles.length; i++) {
+				// 取出li标签
+				var li = titles[i];
+				li.id = i;
+				//        console.log(li);
+				// 监听鼠标的移动
+				li.onmousemove = function() {
+					for (var j = 0; j < titles.length; j++) {
+						titles[j].className = '';
+						divs[j].style.display = 'none';
+					}
+					this.className = 'selected';
+					divs[this.id].style.display = 'block';
+				}
+			}
+
+		}
+
+		function showCode() {
+			document.getElementById('idCode').style.display = "block";
+		}
+
+		function htmlScroll() {
+			var top = document.body.scrollTop || document.documentElement.scrollTop;
+			if (elFix.data_top < top) {
+				elFix.style.position = 'fixed';
+				elFix.style.top = 0;
+				elFix.style.left = elFix.data_left;
+			} else {
+				elFix.style.position = 'static';
+			}
+		}
+
+		function htmlPosition(obj) {
+			var o = obj;
+			var t = o.offsetTop;
+			var l = o.offsetLeft;
+			while (o = o.offsetParent) {
+				t += o.offsetTop;
+				l += o.offsetLeft;
+			}
+			obj.data_top = t;
+			obj.data_left = l;
+		}
+
+		var oldHtmlWidth = document.documentElement.offsetWidth;
+		window.onresize = function() {
+			var newHtmlWidth = document.documentElement.offsetWidth;
+			if (oldHtmlWidth == newHtmlWidth) {
+				return;
+			}
+			oldHtmlWidth = newHtmlWidth;
+			elFix.style.position = 'static';
+			htmlPosition(elFix);
+			htmlScroll();
+		}
+		window.onscroll = htmlScroll;
+
+		var elFix = document.getElementById('div1');
+		htmlPosition(elFix);
+
+
+
+
+
+
+
+		// 导航栏
+
+		window.onscroll = () => {
+			var topScroll = document.documentElement.scrollTop;
+			var nav = document.getElementById("nav");
+			if (topScroll > 50) {
+				nav.style.display = "flex";
+			} else {
+				nav.style.display = "none";
+			}
+		}
+
+		// 最小化悬浮窗
+
+		var left = document.getElementById("left");
+		var left_content = document.getElementById("left-content");
+		var left_hide = document.getElementById("left-hide");
+		var left_show = document.getElementById("left-show");
+		var right = document.getElementById("right");
+		var right_content = document.getElementById("right-content");
+		var right_hide = document.getElementById("right-hide");
+		var right_show = document.getElementById("right-show");
+		var right_chat = document.getElementById("right-chat");
+
+		left.onclick = function() {
+			if (left.dataset.id === "1") {
+				left_content.style.display = "none";
+				left_hide.style.display = "none";
+				left_show.style.display = "block";
+				left.dataset.id = "0";
+			} else {
+				left_content.style.display = "flex";
+				left_hide.style.display = "block";
+				left_show.style.display = "none";
+				left.dataset.id = "1";
+			}
+		}
+
+		right.onclick = function() {
+			if (right.dataset.id === "1") {
+				right_content.style.display = "none";
+				right_hide.style.display = "none";
+				right_show.style.display = "block";
+				right_chat.style.display = "none";
+				right.dataset.id = "0";
+			} else {
+				right_content.style.display = "flex";
+				right_show.style.display = "none";
+				right_hide.style.display = "block";
+				right_chat.style.display = "block";
+				right.dataset.id = "1";
+			}
+		}
+	</script>
+</html>

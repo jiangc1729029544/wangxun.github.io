@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.quanbu {
+				width: 100%;
+				height: 100%;
+			}
+
+			.login {
+				height: 14.2px;
+				width: 100%;
+				position: relative;
+				margin-top: 1px;
+				font-size: 1px;
+			}
+
+			.login2 {
+				list-style: none;
+				width: 100%;
+			}
+
+			.login2 {
+				display: inline-block;
+				/* padding-right: 7px; */
+				position: relative;
+				left: 90px;
+			}
+
+			.login2-1 {
+				display: inline-block;
+				position: relative;
+				left: 1160px;
+			}
+
+			.login2-2 {
+				display: inline-block;
+				position: relative;
+				top: -17px;
+				left: 1230px;
+			}
+
+			.login2-3 {
+				display: inline-block;
+				position: relative;
+				top: -33px;
+				left: 1330px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:link {
+				color: white;
+			}
+
+			a:visited {
+				color: black;
+			}
+
+			a:hover {
+				color: yellow;
+				text-decoration: underline;
+			}
+
+			a:active {
+				color: red;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			.banner-wrapper {
+				width: 100%;
+				height: 500px;
+				margin: 0 auto;
+				position: relative;
+				float: left;
+			}
+
+			ul.banner {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
+			ul.banner li {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			ul.banner li.show {
+				opacity: 1;
+			}
+
+			ul.indicators {
+				position: absolute;
+				left: 50%;
+				bottom: 40px;
+				transform: translateX(-50%);
+			}
+
+			ul.indicators li {
+				width: 10px;
+				height: 3px;
+				border-radius: 25%;
+				background-color: gray;
+				float: left;
+				margin: 0 20px;
+				cursor: pointer;
+				left: 600px;
+				top: 30px;
+			}
+
+			ul.indicators li.active {
+				background-color: white;
+			}
+
+			.built {
+				margin-left: 350px;
+				width: 145px;
+				height: 23px;
+			}
+
+			.ziti {
+				display: inline-block;
+				width: 160px;
+				height: 50px;
+				font-size: 1.5px;
+				color: white;
+
+			}
+
+			.navigation {
+				width: 100%;
+				height: 59px;
+				/* float: left; */
+				position: relative;
+				/* left: 100px; */
+				bottom: 500px;
+			}
+
+			.navigation ul {
+				list-style: none;
+				width: 100%;
+			}
+
+			.navigation li {
+				display: inline-block;
+				padding-right: 27px;
+				color: #FFFFFF;
+				position: relative;
+				left: 500px;
+				top: -50px;
+
+
+			}
+
+			.login1 img {
+				display: inline-block;
+				margin-left: 210px;
+				margin-top: 20px;
+				width: 105px;
+				height: 22px;
+
+			}
+
+			/* 	.login1 {
+				width: 100px;
+			}
+ */
+			.ziti {
+				display: inline-block;
+				line-height: 14px;
+				font-size: 12px;
+				color: #fff;
+			}
+
+			.photo1 img {
+				position: relative;
+				top: 5px;
+				right: 5px;
+			}
+
+			.navigation2 p {
+				font-size: 10px;
+				display: block;
+				margin-block-start: 1em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				margin-top: -33px;
+				position: relative;
+				top: 30px;
+				color: #2D8EFF;
+
+			}
+
+			.navigation2 img {
+				width: 20px;
+				height: 20px;
+			}
+
+			.navigation2 {
+				background-color: #FFFFFF;
+				width: 40px;
+				height: 80px;
+				text-align: center;
+				position: relative;
+				bottom: 300px;
+				left: 50px;
+				float: left;
+			}
+
+			.submit {
+				width: 200px;
+				height: 300px;
+				background-color: #FFFF00;
+				position: relative;
+				left: 1250px;
+				bottom: 400px;
+				border-radius: 4px;
+			}
+
+			.submit img {
+				position: relative;
+				left: 30px;
+				top: 60px;
+				float: left;
+
+			}
+
+			.submit1 {
+				width: 200px;
+				height: 100px;
+				background-color: #FF0000;
+				border-radius: 4px;
+			}
+
+			.submit2 {
+				float: left;
+				width: 200px;
+				height: 200px;
+				background-color: #FFFFFF;
+				border-radius: 4px;
+				padding-top: 10px;
+			}
+
+			.submit2 p {
+				font-size: 10px;
+				/*
+				margin-left: 50px;
+				 */
+				position: relative;
+				margin-top: 35px;
+				text-align: center;
+			}
+
+			.submit2 input {
+				/* text-align: center; */
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 5px;
+				margin-top: 5px;
+				border: 1px solid #d2d2d2;
+			}
+
+			button {
+				font-size: 0.42rem;
+				font-family: Source Han Sans SC;
+				font-weight: 400;
+				color: #FFFFFF;
+				border-radius: 0.545rem;
+				background: #2D8EFF;
+				width: 7.272rem;
+				height: 1.8rem;
+				border: none;
+				/* cursor: pointe */
+				/* text-align: center; */
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				position: relative;
+				bottom: 5px;
+			}
+
+			.push {
+				font-size: 0.42rem;
+				font-family: Source Han Sans SC;
+				font-weight: 400;
+				color: #FFFFFF;
+				border-radius: 0.545rem;
+				background: #2D8EFF;
+				width: 7.272rem;
+				height: 1.8rem;
+				border: none;
+				/* cursor: pointe */
+				/* text-align: center; */
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				position: relative;
+				bottom: 150px;
+			}
+
+			h4 {
+				font-family: "微软雅黑";
+				font－weight: normal;
+				text-align: center;
+				position: relative;
+				top: 50px;
+				/* right: 350px; */
+			}
+
+			.login4 {
+				font-size: 0.42rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #666666;
+				text-align: center;
+				padding: 3.36rem 0 1.18rem 0;
+
+			}
+
+			.nub,
+			.nub1,
+			.nub2,
+			.nub3,
+			.nub4,
+			.nub5 {
+				width: 50px;
+				height: 50px;
+				background-color: #2D8EFF;
+				margin-left: 83px;
+				text-align: center;
+				border-radius: 4px;
+				font-size: 10px;
+				padding: 5px 5px 5px 5px;
+				position: relative;
+				left: 300px;
+			}
+
+			hr {
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+
+			.count {
+				width: 1000px;
+				height: 251px;
+				float: left;
+				background-color: aqua;
+				margin-left: 250px;
+
+			}
+
+			.count span {
+				width: 240px;
+				height: 90px;
+				position: relative;
+				top: 10px;
+				left: 15px;
+			}
+
+			.count1 {
+				font-size: 0.42rem;
+				color: #999999;
+
+			}
+
+			.count2 {
+				font-size: 0.42rem;
+				margin-left: 5px;
+				color: #999999;
+				text-decoration: line-through;
+			}
+
+			.count3 ul {
+				margin-left: 328px;
+				position: relative;
+				bottom: 50px;
+			}
+
+			.count4 ul {
+				margin-left: 540px;
+				float: left;
+				display: inline-block;
+				position: relative;
+				bottom: 135px;
+			}
+
+			.dot {
+				width: 90px;
+				height: 30px;
+				background-color: #2D8EFF;
+				margin-left: 83px;
+				text-align: center;
+				border-radius: 4px;
+				font-size: 10px;
+				padding: 3px 3px 3px 3px;
+				top: 50px;
+
+
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5 {
+				width: 310px;
+				height: 182px;
+				background-color: antiquewhite;
+
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5,
+			.zi {
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #333333;
+				font-size: 0.424rem;
+				padding-left: 50px;
+				line-height: 0.7rem;
+				padding-top: 3rem;
+
+
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5,
+			.zi2 {
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #333333;
+				font-size: 0.424rem;
+				padding-left: 0.6rem;
+				line-height: 0.7rem;
+				padding-top: 1rem;
+
+
+			}
+
+			.merits {
+
+				position: absolute;
+				top: 1300px;
+			}
+
+			.merits1 {
+				position: absolute;
+				left: 600px;
+				top: 1300px;
+			}
+
+			.merits2 {
+				position: absolute;
+				left: 950px;
+				top: 1300px;
+			}
+
+			.merits3 {
+				position: absolute;
+				left: 600px;
+			}
+
+			.merits4 {
+				position: absolute;
+				left: 950px;
+			}
+
+			.merits5 {
+				position: absolute;
+
+			}
+			.Number{
+				margin-right: 2%;
+			}
+			.Number span{
+				    margin-left: 7.5%;
+				    color: #333333;
+				    font-size: 0.6rem;
+			}
+		</style>
+		<!-- <link rel="stylesheeta" type="text/css" href="../css/login.css" /> -->
+		<!-- <script type="text/javascript" src="c."></script> -->
+
+	</head>
+	<body>
+		<div class="quanbu">
+			<div class="login" style="background: #F3F7FD;">
+
+				<ul style="white-space: nowrap; ">
+					<li>
+						<a href="#" class="login2-1">立即开通</a>
+					</li>
+					<li>
+						<a href="#" class="login2-2">七天免费试用</a>
+						<!-- <img src="../img/erweima.png" alt="扫码注册"  /> -->
+					</li>
+					<li>
+						<a href="#" class="login2-3">登录入口</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="banner-wrapper">
+
+				<ul class="banner ">
+					<li style="background-image: url(../img/banner3.png);" class="show"></li>
+					<li style="background-image: url(../img/banner2.png);"></li>
+					<li style="background-image: url(../img/banner_new.png);"></li>
+				</ul>
+				<div class="navigation">
+					<!-- 导航栏 -->
+					<p class="login1">
+						<img class="built" src="../img/logo.png" />
+						<span class="ziti">
+							浙江伽搜科技有限公司 <br />
+							浙江/福建/江西授权服务中心
+						</span>
+					</p>
+					<!-- 导航列表 -->
+					<ul class="navigation1">
+						<li>
+							<a href="首页.html">首页</a>
+						</li>
+						<li>
+							<a href="#">企业邮箱</a>
+						</li>
+						<li>
+							<a href="#">在线购买</a>
+						</li>
+						<li>
+							<a href="#">优惠活动</a>
+						</li>
+						<li>
+							<a href="#">解决方案</a>
+						</li>
+						<li>
+							<a href="#">技术支持</a>
+						</li>
+						<li>
+							<a href="#">开通基础版</a>
+						</li>
+						<li class="photo1">
+							<img src="../img/phone.png" alt="400-0333-580" />400-0333-580
+						</li>
+					</ul>
+				</div>
+				<ul class="indicators">
+					<li class="active"></li>
+
+					<li></li>
+
+					<li></li>
+				</ul>
+				<div class="navigation2">
+					<img src="../img/float2.png" />
+					<p>快</p><br />
+					<p>速</p><br />
+					<p>开</p><br />
+					<p>通</p><br />
+				</div>
+				<div class="submit">
+					<img src="../img/inpimg.png" />
+					<div class="submit1"></div>
+					<div class="submit2">
+						<p>立即开通试用</p>
+						<input type="text" placeholder="请输入姓名" />
+						<input type="text" placeholder="请输入姓名" />
+						<input type="text" placeholder="请输入姓名" />
+						<input type="text" placeholder="请输入姓名" />
+						<button>提交申请</button>
+
+					</div>
+				</div>
+			</div>
+			<h4>腾讯企业邮箱价格</h4>
+			<p class="login4">
+				腾讯企业邮箱5折优惠大促，免费赠送域名及企业微信
+			</p>
+
+			<span class="nub">100用户</span>
+			<span class="nub1">100用户</span>
+			<span class="nub2">100用户</span>
+			<span class="nub3">100用户</span>
+			<span class="nub4">100用户</span>
+			<span class="nub5">100用户</span>
+			<hr color="#2D8EFF" width="980" />
+			<div class="count">
+				<span>
+					<span>限时特惠</span> <span style="color: #2D8EFF; font-size: 40px;">50505</span>
+					<span style="color: blue;">元/年</span> <br>
+					<span class="count1">原价</span><span class="count2">66666</span>
+				</span>
+				<div
+					style="border: 0.01px solid;color: darkgray; float:left;height:97px;position: relative;left:295px ;bottom: 37px;">
+				</div>
+
+				<div class="count3">
+					<ul>
+						<li>
+							<!-- <i>
+								<img src="../img/duihao.png" />
+							</i> -->
+							无限邮箱容量
+						</li>
+						<li>
+							免费开通企业微信
+						</li>
+						<li>
+							32G超大附件
+						</li>
+						<li>
+							个性化登陆页面
+						</li>
+
+
+					</ul>
+
+				</div>
+				<div class="count4">
+					<ul>
+						<li>
+							<!-- <i>
+									<img src="../img/duihao.png" />
+								</i> -->
+							赠送专属域名，一键开通
+						</li>
+						<li>
+							支持邮件撤回，邮件审批
+						</li>
+						<li>
+							支持邮件备份，邮件归档
+						</li>
+						<li>
+							关联微信和邮箱账号
+
+						</li>
+
+
+					</ul>
+				</div>
+				<div>
+					<button class="push">
+						<a href="#">立即资讯</a>
+					</button>
+					<button class="push">
+						<a href="#">免费申请试用</a>
+					</button>
+				</div>
+				<hr style="color: #D2D2D2; width: 980px; position: relative;bottom: 130px;" />
+				<p style="position: relative;bottom: 100px;left: 260px;">每用户每天不足<span
+						style="color: crimson;font-size: 25px;position: relative; left: 1px;top: 0px;font-weight: 700;">0.1元</span>即可享受专业、放心的企业邮箱服务
+				</p>
+				
+				<!-- <div class="Number"> <span>账号数(个)</span><span>
+				<button class="userNubplus ">
+				<img src="../img/jia.png" alt></button>
+				<input class="userNnb" type="text">
+				<button class="userNubreduce" style="color: rgba(255,255,255，0.8)"></button></span>
+				</div> -->
+
+				<h4>腾讯企业邮箱价格</h4>
+				<p class="login4">
+					腾讯企业邮箱5折优惠大促，免费赠送域名及企业微信
+				</p>
+				<div class="merits" onmouseover="over(this)" onmouseleave="leave(this)">
+					<p class="zi">
+						<img src="../img/cpsj1.png" />
+						移动应用，高效协作
+					</p>
+					<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+				</div>
+				<div class="merits1" onmouseover="over(this)" onmouseleave="leave(this)">
+					<p class="zi">
+						<img src="../img/cpsj1.png" />
+						移动应用，高效协作
+					</p>
+					<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+				</div>
+				<div class="merits2" onmouseover="over(this)" onmouseleave="leave(this)">
+					<p class="zi">
+						<img src="../img/cpsj1.png" />
+						移动应用，高效协作
+					</p>
+					<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+				</div>
+				<div class="merits3" onmouseover="over(this)" onmouseleave="leave(this)">
+					<p class="zi">
+						<img src="../img/cpsj1.png" />
+						移动应用，高效协作
+					</p>
+					<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+				</div>
+				<div class="merits4" onmouseover="over(this)" onmouseleave="leave(this)">
+					<p class="zi">
+						<img src="../img/cpsj1.png" />
+						移动应用，高效协作
+					</p>
+					<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+				</div>
+				<div class="merits5" onmouseover="over(this)" onmouseleave="leave(this)">
+					<p class="zi">
+						<img src="../img/cpsj1.png" />
+						移动应用，高效协作
+					</p>
+					<p class="zi2">在微信与企业微信中，邮件触手可及，更作为企业微信办公套件，共享通讯录、微盘、文档、日历等基础应用，沟通协作更顺畅。</p>
+				</div>
+			</div>
+
+		
+
+	</body>
+	<script>
+		var curIndex = 0;
+		var timer = null;
+
+		function toggle(nextIndex) {
+			var lis = document.querySelectorAll('ul.banner>li');
+			var indicators = document.querySelectorAll('ul.indicators>li');
+			lis[curIndex].classList.remove('show');
+			indicators[curIndex].classList.remove('active');
+			curIndex = nextIndex < 0 ? lis.length - 1 : nextIndex % lis.length;
+			lis[curIndex].classList.add('show');
+			indicators[curIndex].classList.add('active');
+		}
+		// 停止自动播放
+		document.querySelector('.banner-wrapper').onmouseenter = function() {
+			clearInterval(timer);
+		}
+		// 恢复自动播放
+		document.querySelector('.banner-wrapper').onmouseleave = function() {
+			timer = setInterval(function() {
+				toggle(curIndex + 1);
+			}, 3000);
+		}
+		// 指定切换
+		document.querySelectorAll('ul.indicators>li').forEach(function(indicators, i) {
+			indicators.onclick = function() {
+				toggle(i)
+			};
+		})
+		// 上一张
+		document.querySelector('button.btn-prev').onclick = function() {
+			toggle(curIndex - 1);
+		}
+		// 下一张
+		document.querySelector('button.btn-next').onclick = function() {
+			toggle(curIndex + 1);
+		}
+		timer = setInterval(function() {
+			toggle(curIndex + 1);
+		}, 3000);
+		/* 鼠标经过触发事件 */
+		function over(x) {
+			x.style.backgroundColor = "#33CCFF";
+		}
+
+		function leave(x) {
+			x.style.backgroundColor = "antiquewhite";
+		}
+	</script>
+</html>

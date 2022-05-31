@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				/*这里给全局设置，去除所有元素标签的内外边距*/
+			}
+
+			.quanbu1 {
+				width: 100%;
+				height: 100%;
+			}
+
+			.quanbu {
+				width: 100%;
+				height: 100%;
+			}
+
+			.login {
+				height: 14.2px;
+				width: 100%;
+				position: relative;
+				margin-top: 1px;
+				font-size: 1px;
+			}
+
+			.login2 {
+				list-style: none;
+				width: 100%;
+			}
+
+			.login2 {
+				display: inline-block;
+				/* padding-right: 7px; */
+				position: relative;
+				left: 90px;
+			}
+
+			.login2-1 {
+				display: inline-block;
+				position: relative;
+				left: 1160px;
+			}
+
+			.login2-2 {
+				display: inline-block;
+				position: relative;
+				top: -17px;
+				left: 1230px;
+			}
+
+			.login2-3 {
+				display: inline-block;
+				position: relative;
+				top: -33px;
+				left: 1330px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:link {
+				color: black;
+			}
+
+			a:visited {
+				color: black;
+			}
+
+			a:hover {
+				color: yellow;
+				text-decoration: underline;
+			}
+
+			a:active {
+				color: red;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			.login1 {
+				box-shadow: 0 0 14px #ddd;
+			}
+
+			.login1 img {
+				display: inline-block;
+				margin-left: 210px;
+				margin-top: 20px;
+				width: 105px;
+				height: 22px;
+
+			}
+
+			.ziti {
+				display: inline-block;
+				line-height: 14px;
+				font-size: 12px;
+				color: #000000;
+			}
+
+			.navigation {
+				background-color: #FFFFFF;
+			}
+
+			.navigation ul {
+				list-style: none;
+				width: 100%;
+			}
+
+			.navigation1 {
+				background-color: rgb(243,243,243);
+			}
+
+			.navigation li {
+				display: inline-block;
+				padding-right: 27px;
+				color: #000000;
+				position: relative;
+				left: 530px;
+				top: -30px;
+
+
+			}
+
+			.navigation {
+				background-color: #FFFFFF;
+			}
+
+			.hsi {
+				font-family: "微软雅黑";
+				font－weight: normal;
+				text-align: center;
+				position: relative;
+				top: 40px;
+				right: -40px;
+			}
+
+			.login5 {
+				font-size: 0.42rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #666666;
+				text-align: center;
+				padding: 3.36rem 0 1.18rem 0;
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5 {
+				width: 310px;
+				height: 182px;
+				background-color: #FFFFFF;
+				box-shadow: 0 0 14px #ddd;
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5,
+			.zi {
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #333333;
+				font-size: 0.424rem;
+				padding-left: 50px;
+				line-height: 0.7rem;
+				padding-top: 3rem;
+
+
+			}
+
+			.merits,
+			.merits1,
+			.merits2,
+			.merits3,
+			.merits4,
+			.merits5,
+			.zi2 {
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: #333333;
+				font-size: 0.424rem;
+				padding-left: 0.6rem;
+				line-height: 0.7rem;
+				padding-top: 1rem;
+
+
+			}
+
+			.merits {
+
+				position: absolute;
+				left: 250px;
+				top: 500px;
+			}
+
+			.merits1 {
+				position: absolute;
+				left: 600px;
+				top: 500px;
+			}
+
+			.merits2 {
+				position: absolute;
+				left: 950px;
+				top: 500px;
+			}
+
+			.merits3 {
+				position: absolute;
+				left: 600px;
+				top: 750px;
+			}
+
+			.merits4 {
+				position: absolute;
+				left: 950px;
+				top: 750px;
+			}
+
+			.merits5 {
+				position: absolute;
+				left: 250px;
+				top: 750px;
+
+			}
+
+
+
+
+
+
+
+			/* background-image: url(../img/4.jpg);
+						background-repeat: repeat-x; */
+			/* 		width: 1000px;
+						height: 1000px; */
+			/* 	.backg {
+				width: 100%;
+				height: 350px;
+				background-image: url(../img/headerbj.png);
+				background-size: 100% 100%;
+			} */
+
+			.underneath {
+				width: 100%;
+				height: 600px;
+				background-color: rgb(51, 55, 69);
+				float: left;
+			}
+
+			.underneath span {
+				width: 150px;
+				height: 200px;
+				color: #FFFFFF;
+				font-size: 15px;
+				position: relative;
+				top: 30px;
+
+			}
+
+			.underneath-1 {
+				position: relative;
+				left: 200px;
+			}
+
+			.underneath-1 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-2 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-3 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-4 img {
+				position: relative;
+				top: 18px;
+			}
+
+			.underneath-2 {
+				position: relative;
+				left: 380px;
+			}
+
+			.underneath-3 {
+				position: relative;
+				left: 580px;
+			}
+
+			.underneath-4 {
+				position: relative;
+				left: 680px;
+			}
+
+			.bottom-1 {
+				float: left;
+				margin-left: 200px;
+				margin-top: 100px;
+
+			}
+
+			.bottom-1 p {
+				padding-top: 20px;
+
+			}
+
+			.bottom-2 {
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-2 p {
+				padding-top: 20px;
+			}
+
+			.bottom-3 {
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-3 p {
+				padding-top: 20px;
+			}
+
+			.bottom-4 {
+				width: 400px;
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-4 p {
+				padding-top: 20px;
+			}
+
+			.bottom-5 {
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+
+			.bottom-5 img {
+				width: 150px;
+				height: 150px;
+				margin-top: 40px;
+			}
+
+			.sign {
+				font-size: 20px;
+			}
+
+			.total {
+				right: 445px;
+				width: 300px;
+				height: 50px;
+				background-color: #D9ECFF;
+			}
+
+			.total-1 {
+				right: 125px;
+				bottom: 70px;
+				width: 300px;
+				height: 50px;
+				background-color: #D9ECFF;
+			}
+
+			/* 滑动导航栏 */
+
+			#nav {
+				width: 100%;
+				height: 64px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background-color: white;
+				display: none;
+				align-items: center;
+				z-index: 99;
+			}
+
+			#nav>.w {
+				height: calc(100% - 2px);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			#nav ul {
+				height: 100%;
+				display: flex;
+				margin-left: 150px;
+			}
+
+			#nav li {
+				padding: 20px;
+				font-size: 13px;
+				box-sizing: border-box;
+				height: 100%;
+
+			}
+
+			li.state {
+				border-bottom: 3px solid #54A3FF;
+			}
+
+			.blue {
+				color: #54A3FF;
+			}
+
+			li.button-box {
+				display: flex;
+				align-items: center;
+			}
+
+			li.button-box>button.debuts-bt {
+				background-color: #2983EF;
+				width: 80px;
+				height: 30px;
+				border-radius: 30px;
+				border: none;
+				color: white;
+				margin-left: 20px;
+			}
+
+			li.button-box>button.login-bt {
+				color: #2983EF;
+				width: 80px;
+				height: 30px;
+				top: 3px;
+				border-radius: 30px;
+				border: 1px solid #2983EF;
+				background-color: white;
+				margin: 0 20px 0 6px;
+			}
+
+			.logo-box {
+				float: left;
+				position: relative;
+
+				left: 200px;
+			}
+
+			.logo-box1 {
+				width: 200px;
+				float: left;
+				color: #0000FF;
+				position: relative;
+				left: 200px;
+				font-size: 10px;
+			}
+
+			.logo-box2 {
+				float: left;
+				width: 200px;
+				color: #0000FF;
+				position: relative;
+				left: 200px;
+				font-size: 10px;
+
+			}
+
+			.phone-box {
+				position: relative;
+				top: 20px;
+				right: 23px;
+			}
+
+			.scanning {
+				width: 1100px;
+				height: 600px;
+				margin-left: 300px;
+				background-color: rgb(255, 255, 255);
+			}
+
+			.scanning-1 {
+				width: 320px;
+				height: 280px;
+				float: left;
+				margin-left: 200px;
+				margin-top: 100px;
+				background-color: rgb(249, 249, 251);
+			}
+
+			.scanning-2 {
+				width: 320px;
+				height: 280px;
+				margin-left: 550px;
+				margin-top: 100px;
+				background-color: rgb(249, 249, 251);
+			}
+
+			.scanning-2 img {
+				width: 120px;
+				height: 120px;
+				margin-top: 85px;
+				margin-left: 100px;
+			}
+
+			.scanning-button {
+				width: 130px;
+				height: 30px;
+				font-size: 10px;
+				margin-left: 90px;
+				background: #2d8dff;
+				border-radius: 5px;
+				color: #fff;
+				border: none;
+				margin-top: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background-color: rgb(243,243,243);">
+			<div id="nav">
+				<div class="w">
+					<div class="information">
+						<div>
+							<img class="logo-box" src="../img/fixed-logo.png">
+						</div>
+						<span class="logo-box1">
+							浙江伽搜科技有限公司</span>
+						<span class="logo-box2">浙江福建/江西授权服务中心</span>
+
+					</div>
+					<ul>
+						<li class="state"><a href="首页.html" class="blue">首页</a></li>
+						<li><a href="开通基础版.html">开通基础版</a></li>
+						<li><a href="申请试用.html">申请试用</a></li>
+						<li><a href="优惠活动.html">优惠活动</a></li>
+						<li><a href="技术支持.html">技术支持</a></li>
+						<li class="button-box" style="padding: 0;">
+							<button class="debuts-bt">立即开通</button>
+							<button class="login-bt">登录入口</button>
+						</li>
+						<li class="phone" style="margin: 0px 10px 0px 35.4px; padding: 0;">
+						    <div class="phone-box" style="width: 13px; height: 13px;">
+						        <img src="../img/phone2.png" class="fl" />
+						    </div>
+						    <div class="number ">400-0333-580</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="login" style="background: #F3F7FD;">
+
+				<ul style="white-space: nowrap; ">
+					<li>
+						<a href="#" class="login2-1">立即开通</a>
+					</li>
+					<li>
+						<a href="#" class="login2-2">七天免费试用</a>
+						<!-- <img src="../img/erweima.png" alt="扫码注册"  /> -->
+					</li>
+					<li>
+						<a href="#" class="login2-3">登录入口</a>
+					</li>
+				</ul>
+			</div>
+			<div class="backg">
+				<div class="navigation">
+					<!-- 导航栏 -->
+					<p class="login1">
+						<img class="built" src="../img/fixed-logo.png" />
+						<span class="ziti">
+							浙江伽搜科技有限公司 <br />
+							浙江/福建/江西授权服务中心
+						</span>
+					</p>
+					<!-- 导航列表 -->
+					<ul class="navigation1">
+						<li>
+							<a href="首页.html">首页</a>
+						</li>
+						<li>
+							<a href="企业邮箱.html">企业邮箱</a>
+						</li>
+						<li>
+							<a href="在线购买.html">在线购买</a>
+						</li>
+						<li>
+							<a href="优惠活动.html">优惠活动</a>
+						</li>
+						<li>
+							<a href="解决方案.html">解决方案</a>
+						</li>
+						<li>
+							<a href="技术支持.html">技术支持</a>
+						</li>
+						<li>
+							<a href="开通基础版.html">开通基础版</a>
+						</li>
+						<li class="photo1">
+							<img src="../img/phone2.png" />400-0333-580
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="scanning">
+				<p style="text-align: center;position: relative;top: 50px;">选择开通方式</p>
+				<div class="scanning-1">
+					<p style="text-align: center; position: relative;top: 30px;">新企业</p>
+					<p style="text-align: center;position: relative;top: 50px;">开通腾讯企业邮箱</p>
+					<i style="text-align: center;"></i>
+					<p style="text-align: center;position: relative;top: 70px;color: #999999;font-size: 10px;">获得专业、安全的企业邮箱服务</p>
+					<button class="scanning-button">开通</button>
+				</div>
+				<div class="scanning-2">
+					<p style="text-align: center;position: relative;top: 30px;">快捷开通</p>
+					<p style="text-align: center;position: relative;top: 50px;">扫码添加客服快速开通</p>
+					<img src="../img/erweima.png" />
+				</div>
+			</div>
+			<div style="width: 100%; height: 60px;"></div>
+			<div class="underneath">
+				<span class="underneath-1"><img src="../img/footer1%20(1).png" /> 8000万企业信赖之选</span>
+				<span class="underneath-2"><img src="../img/footer2.png" />30天免费试用</span>
+				<span class="underneath-3"><img src="../img/footer3.png" />1对1专属客服</span>
+				<span class="underneath-4"><img src="../img/footer4.png" />7x24小时服务</span>
+				<hr style="color: #C0C4CC; width: 1510px; position: relative; top: 60px;" />
+				<div><span class="bottom-1">
+						<p class="sign">企业邮箱</p>
+						<p>产品优势</p>
+						<p>管理功能</p>
+						<p>使用功能</p>
+						<p>整合方案</p>
+					</span>
+					<span class="bottom-2">
+						<p class="sign">技术支持</p>
+						<p>常见问题</p>
+						<p>帮助中心</p>
+						<p>行业动态</p>
+						<p>客户案例</p>
+						<p>客户端设置</p>
+						<p>友情链接</p>
+					</span>
+					<span class="bottom-3">
+						<p class="sign">解决方案</p>
+						<p>产品集成</p>
+						<p>客户案例</p>
+
+					</span>
+					<span class="bottom-4">
+						<p class="sign">关于伽搜</p>
+						<p>电话：400-0333-580</p>
+						<p>地址：浙江省杭州市西湖区紫金创业园501-8室</p>
+						<p>邮箱：order@jasoso.com</p>
+
+					</span>
+					<span class="bottom-5">
+						<p class="sign">售后客服</p>
+						<img src="../img/erweima.png" />
+					</span>
+				</div>
+				<hr style="color: #D2D2D2; width: 1510px; position: relative;top: 180px;" />
+				<p style="color: #FFFFFF;margin-left: 560px;margin-top: 200px;">浙江伽搜科技有限公司版权所有@1997-2020
+					·浙ICP备14025588号-7</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		// 导航栏
+		window.onscroll = () => {
+			var topScroll = document.documentElement.scrollTop;
+			var nav = document.getElementById("nav");
+			if (topScroll > 50) {
+				nav.style.display = "flex";
+			} else {
+				nav.style.display = "none";
+			}
+		}
+		window.onscroll = () => {
+			var topScroll = document.documentElement.scrollTop;
+			var nav = document.getElementById("nav");
+			if (topScroll > 50) {
+				nav.style.display = "flex";
+			} else {
+				nav.style.display = "none";
+			}
+		}
+	</script>
+</html>
